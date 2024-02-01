@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Counter />
       <ItemListContainer greeting = {'Bienvenido a nuestra tienda de videojuegos'}/>
       <p className="App">Descubre las últimas novedades y ofertas en juegos</p>
+      <Counter />
     </div>
   );
 };
