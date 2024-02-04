@@ -14,10 +14,6 @@ function ItemListContainer({ greeting }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    /*getProducts()
-      .then((res) => setItems(res))
-      .catch((err) => console.log(err.message));*/
-
     const fetchProducts = async () => {
       const asyncFunc = categoryId ? getProductsByCategory : getProducts;
       setIsLoading(true);
