@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProductById } from '../../serverMock/productMock';
+import { getProductById } from '../../ServerMock/productMock';
 import { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './styles.css';
