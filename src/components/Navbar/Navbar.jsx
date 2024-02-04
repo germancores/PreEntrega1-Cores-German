@@ -4,25 +4,43 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './navBarStyled.css';
 import CarWidget from '../CartWidgets/CarWidget';
+import { Link, NavLink } from 'react-router-dom';
+import Logo from '../../Assets/img/logo.jpg';
+
 function BasicExample() {
   const handleClick = (event) => {
     console.log(event);
   };
   return (
-    <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
+    <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary, navbar-nav">
       <Container>
+      <div className="container-logo">
+        <Link to="/">
+          <img src={Logo} alt="logo" className="logo" />
+        </Link>
+      </div>
+      <Link to="/">
         <Navbar.Brand href="#home">Pro Gamer Store</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Link to="/">
+            <Nav.Link href='#home'>Inicio</Nav.Link>
+            </Link>
             <Nav.Link href="#link">Productos</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Consolas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+            <NavLink to="/category/console">
+              <NavDropdown.Item href="#consolas">Consolas</NavDropdown.Item>
+              </NavLink>
+              <NavLink to="/category/game">
+              <NavDropdown.Item href="#juegos">
                 Juegos
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Mandos</NavDropdown.Item>
+              </NavLink>
+              <NavLink to="/category/joystick">
+              <NavDropdown.Item href="#mandos">Mandos</NavDropdown.Item>
+              </NavLink>
               <NavDropdown.Divider />
             </NavDropdown>
           </Nav>
