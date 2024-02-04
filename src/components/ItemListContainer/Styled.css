@@ -1,17 +1,13 @@
-.ItemListStyle {
-    text-align: center;
-}
-
 .container{
-    margin: 20px;
-    padding: 0 30px;
-  }
-  .title{
-    font-size: 20px;
-    color: black;
-    text-align: center;
-  }
-  
-  
-  
-  
+  margin: 20px;
+  padding: 0 30px;
+  text-align: center;
+
+}
+.title{
+  text-align: center;
+
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
